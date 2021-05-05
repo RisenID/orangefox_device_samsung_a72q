@@ -1,5 +1,5 @@
 # Device release name
-ro.display.series=Samsung Galaxy A52
+ro.display.series=Samsung Galaxy A72
 
 # product/board stuff
 ro.product.board=atoll

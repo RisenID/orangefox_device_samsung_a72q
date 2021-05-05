@@ -1,4 +1,4 @@
-# TWRP Tree for Samsung Galaxy A52
+# TWRP Tree for Samsung Galaxy A72
 
 ### Note
 * Work-In-Progress
