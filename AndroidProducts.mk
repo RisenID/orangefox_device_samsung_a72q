@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_a72q.mk
+     $(LOCAL_DIR)/twrp_a72q.mk
