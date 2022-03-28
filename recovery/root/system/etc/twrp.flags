@@ -16,7 +16,7 @@ odm                 /odm         ext4        ro,barrier=1,discard               
 
 # ETC Moint Point
 /cache              ext4         /dev/block/bootdevice/by-name/cache             flags=display="Cache";backup=1;wipeingui
-/metadata           ext4         /dev/block/bootdevice/by-name/metadata          flags=display="Metadata";wipeingui;wrappedkey
+/metadata           ext4         /dev/block/bootdevice/by-name/metadata          flags=display="Metadata";backup=1;wipeingui
 
 # Persist Point
 /persist            ext4         /dev/block/bootdevice/by-name/persist           flags=display="Persist";backup=1
@@ -30,3 +30,5 @@ odm                 /odm         ext4        ro,barrier=1,discard               
 # SD Card & USB-OTG Points
 /external_sd        auto         /dev/block/mmcblk0p1  /dev/block/mmcblk0        flags=display="MicroSD Card";storage;wipeingui;removable
 /usb_otg            auto         /dev/block/sde1       /dev/block/sde            flags=display="USB-OTG";storage;wipeingui;removable
+
+/firmware           vfat         /dev/block/bootdevice/by-name/apnhlos           flags=display="Firmware";mounttodecrypt
