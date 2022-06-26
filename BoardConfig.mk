@@ -40,6 +40,8 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
+TARGET_SUPPORTS_64_BIT_APPS := true
+
 # CPUSets and Sched
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
