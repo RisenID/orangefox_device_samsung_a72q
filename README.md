@@ -18,4 +18,4 @@ export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch twrp_a72q
 * hendramanu
 
 ### Links
-* [Kernel source](https://github.com/Samsung-SM7215/android_kernel_samsung_sm7125)
+* [Kernel source](https://github.com/Simon1511/android_kernel_samsung_sm7125/tree/twrp)
