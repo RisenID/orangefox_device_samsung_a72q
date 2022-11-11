@@ -24,7 +24,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-
 on boot
     mount configfs none /config
     mkdir /config/usb_gadget/g1 0770
@@ -83,10 +82,8 @@ on boot
     mount functionfs mtp /dev/usb-ffs/mtp uid=2000,gid=2000
     mount functionfs ptp /dev/usb-ffs/ptp uid=2000,gid=2000
     setprop vendor.usb.controller ${sys.usb.controller}
-
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
-
 on property:sys.usb.config=none
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
@@ -100,10 +97,8 @@ on property:sys.usb.config=none
     rm /config/usb_gadget/g1/configs/b.1/f4
     rm /config/usb_gadget/g1/configs/b.1/f5
     setprop sys.usb.state ${sys.usb.config}
-
 on property:sys.usb.config=mtp,adb
     start adbd
-
 on property:sys.usb.ffs.ready=1 && property:sys.usb.ffs.mtp.ready=1 && property:sys.usb.config=mtp,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb"
     rm /config/usb_gadget/g1/configs/b.1/f1
