@@ -20,3 +20,5 @@ export FOX_VARIANT="A12"
 export OF_MAINTAINER="Risen"
 export FOX_BUILD_TYPE="Beta"
 export FOX_VERSION="R11.1_2"
+export OF_FL_PATH1="/tmp/flashlight" # See /init.recovery.qcom.rc for more information
+export OF_FL_PATH2="

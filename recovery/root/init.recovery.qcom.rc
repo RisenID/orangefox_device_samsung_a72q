@@ -57,3 +57,9 @@ service mountfix /sbin/sh /system/bin/mount.sh
     oneshot
     disabled
     seclabel u:r:recovery:s0
+
+# Fix flashlight on orangefox
+on property:ro.orangefox.boot=1
+    mkdir /tmp/flashlight
+    write /tmp/flashlight/max_brightness "1"
+    symlink /sys/devices/virtual/camera/flash/rear_flash /tmp/flashlight/brightness
