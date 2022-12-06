@@ -48,16 +48,6 @@ on fs
 on property:ro.build.version.security_patch=*
     setprop ro.vendor.build.security_patch ${ro.build.version.security_patch}
 
-on property:sys.usb.ffs.ready=1
-    start mountfix
-
-service mountfix /sbin/sh /system/bin/mount.sh
-    user root
-    group root
-    oneshot
-    disabled
-    seclabel u:r:recovery:s0
-
 # Fix flashlight on orangefox
 on property:ro.orangefox.boot=1
     mkdir /tmp/flashlight
