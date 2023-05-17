@@ -34,10 +34,9 @@ odm                 /odm         erofs       ro                                 
 /persist            ext4         /dev/block/bootdevice/by-name/persist           flags=display="Persist";backup=1
 /persist_image      emmc         /dev/block/bootdevice/by-name/persist           flags=display="Persist Image";backup=1;flashimg=1
 
-# Modem/EFS Mount Point (Combo)
-/efs                emmc         /dev/block/bootdevice/by-name/efs               flags=display="EFS";backup=1
-/modemst1           emmc         /dev/block/bootdevice/by-name/modemst1          flags=subpartitionof=/efs;backup=1
-/modemst2           emmc         /dev/block/bootdevice/by-name/modemst2          flags=subpartitionof=/efs;backup=1
+# EFS Mount Point
+/efs                ext4         /dev/block/bootdevice/by-name/efs               flags=display="EFS";backup=1
+/sec_efs            ext4         /dev/block/bootdevice/by-name/sec_efs           flags=display="Sec EFS";backup=1
 
 # SD Card & USB-OTG Points
 /sdcard1            auto         /dev/block/mmcblk0p1  /dev/block/mmcblk0        flags=display="MicroSD";storage;wipeingui;removable
