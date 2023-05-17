@@ -154,7 +154,7 @@ TW_INCLUDE_RESETPROP := true
 # TWRP Configuration: Brightness/CPU
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone17/temp
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
-TW_MAX_BRIGHTNESS := 365
+TW_MAX_BRIGHTNESS := 486
 TW_DEFAULT_BRIGHTNESS := 219
 
 # TWRP Configuration: Logd
