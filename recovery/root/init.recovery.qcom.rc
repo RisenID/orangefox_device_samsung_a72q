@@ -27,8 +27,12 @@
 
 import /init.recovery.qcom_decrypt.rc
 
+on early-init
+    start linkblobs
+
 on init
     setprop prepdecrypt.loglevel 2
+    setprop prepdecrypt.setpatch true
 
 on fs
     # Force ANDROID_ROOT to /system_root
@@ -44,6 +48,13 @@ on fs
     chown system system /dev/ion
 
     mount vfat /dev/block/bootdevice/by-name/apnhlos /firmware ro shortname=lower,uid=0,gid=1000,dmask=227,fmask=337
+
+service linkblobs /system/bin/linkblobs.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
 
 on property:ro.build.version.security_patch=*
     setprop ro.vendor.build.security_patch ${ro.build.version.security_patch}
