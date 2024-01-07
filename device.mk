@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Encryption
 PRODUCT_PACKAGES += \
     qcom_decrypt \
